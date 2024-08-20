@@ -1,0 +1,102 @@
+/* Palet Warna */
+:root {
+  --color-primary: #ff0000; /* Merah */
+  --color-secondary: #ffffff; /* Putih */
+  --color-primary-light: #ff4d4d; /* Merah muda terang */
+  --color-primary-dark: #cc0000; /* Merah gelap */
+  --color-secondary-light: #f2f2f2; /* Putih abu-abu terang */
+  --color-secondary-dark: #e0e0e0; /* Putih abu-abu gelap */
+  --color-accent: #ffcccc; /* Merah muda */
+  --color-accent-dark: #ff9999; /* Merah muda gelap */
+}
+
+/* Reset dasar */
+body, h1, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Gaya Umum */
+body {
+  background-color: var(--color-secondary);
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 20px;
+}
+
+/* Judul Header */
+.header__title {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.header__title a {
+  text-decoration: none;
+  color: var(--color-primary-dark);
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.image-title {
+  width: 60px;
+  height: auto;
+  margin-left: 5px;
+}
+
+
+/* Navigasi */
+.header__nav {
+  display: flex;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  margin: 0 20px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: normal;
+  position: relative;
+  transition: color 0.3s ease;
+  padding-bottom: 5px; 
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-primary-dark);
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
